@@ -6,7 +6,7 @@
 import Foundation
 
 extension NotificationCenter {
-	/// An enum to store all the possible cases for notification
+	/// 	An enum to store all the possible cases for notification
 	/// center messages in a project. This isn't mandatory but just
 	/// a best practice to make the below usage type-safe.
 	///
@@ -17,7 +17,7 @@ extension NotificationCenter {
 		case messageTwo = "messageTwo"
 	}
 	
-	/// Removes the notification observer on the default
+	/// 	Removes the notification observer on the default
 	/// notification center.
 	///
 	/// - Parameters:
@@ -28,7 +28,7 @@ extension NotificationCenter {
 		NotificationCenter.default.removeObserver(observer, name: Notification.Name(name.rawValue), object: object)
 	}
 	
-	/// Adds a notification observer for the default
+	/// 	Adds a notification observer for the default
 	/// notification center.
 	///
 	/// - Parameters:
@@ -40,7 +40,7 @@ extension NotificationCenter {
 		NotificationCenter.default.addObserver(observer, selector: selector, name: Notification.Name(name.rawValue), object: object)
 	}
 	
-	/// Posts a notification on the default notification
+	/// 	Posts a notification on the default notification
 	/// center. Configured to be executed on the main thread
 	/// so that it can perform.
 	///

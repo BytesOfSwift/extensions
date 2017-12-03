@@ -10,33 +10,31 @@ extension UserDefaults {
 		case keyOne = "keyOne"
 		case keyTwo = "keyTwo"
 	}
-	
-	/// -setObject:forKey: immediately stores a value (or removes the value if nil is passed as the value) for the provided key in the search list entry for the receiver's suite name in the current user and any host, then asynchronously stores the value persistently, where it is made available to other processes.
-	///
-	/// - Parameters:
-	///   - value: <#value description#>
-	///   - key: <#key description#>
+
 	static func set(_ value: Any?, forKey key: UserDefaultsKey) {
 		UserDefaults.standard.set(value, forKey: key.rawValue)
 	}
+	
 	static func set(_ value: Float, forKey key: UserDefaultsKey) {
 		UserDefaults.standard.set(value, forKey: key.rawValue)
 	}
+	
 	static func set(_ value: Double, forKey key: UserDefaultsKey) {
 		UserDefaults.standard.set(value, forKey: key.rawValue)
 	}
+	
 	static func set(_ value: Int, forKey key: UserDefaultsKey) {
 		UserDefaults.standard.set(value, forKey: key.rawValue)
 	}
+	
 	static func set(_ value: Bool, forKey key: UserDefaultsKey) {
 		UserDefaults.standard.set(value, forKey: key.rawValue)
 	}
+	
 	static func set(_ value: URL?, forKey key: UserDefaultsKey) {
 		UserDefaults.standard.set(value, forKey: key.rawValue)
 	}
-}
-
-extension UserDefaults {
+	
 	static func object(forKey key: UserDefaultsKey) -> Any? {
 		return UserDefaults.standard.object(forKey: key.rawValue)
 	}

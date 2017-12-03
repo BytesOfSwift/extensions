@@ -1,20 +1,21 @@
 /*:
 # UIImageView
+An object that displays a single image or a sequence of animated images in your interface.
+
 [Apple Documentation for UIImageView](https://developer.apple.com/documentation/uikit/uiimageview)
+
+## Included Extensions
+1. UIImageView+DownloadFrom
 */
 
 import UIKit
 
 extension UIImageView {
 	///		Fills the UIImageView with the image downloaded
-	/// from the URL given.
+	/// from the given URL string.
 	///
 	/// - Parameter address: image download URL
-	func downloadFrom(_ address: String) {
-//		backgroundColor = UIColor.gray
-//		image = UIImage(named: "PlaceHolderIcon")
-		contentMode = .center
-		
+	func downloadFrom(_ address: String) {		
 		guard let url = URL(string: address) else { return }
 		
 		URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -30,8 +31,3 @@ extension UIImageView {
 		}.resume()
 	}
 }
-
-let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 120, height: 120))
-imageView.downloadFrom("https://unsplash.com/photos/1LR2wt9dCSk")
-
-

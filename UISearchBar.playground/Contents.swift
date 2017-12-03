@@ -1,6 +1,15 @@
 /*:
 # UISearchBar
+A text field–like control that supports text-based searches.
+
 [Apple Documentation for UISearchBar](https://developer.apple.com/documentation/uikit/uisearchbar)
+
+## Included Extensions
+1. UISearchBar+SetCancelButton
+2. UISearchBar+SetSearchIconColor
+3. UISearchBar+SetPlaceHolderColor
+4. UISearchBar+SetBackgroundColor
+5. UISearchBar+RetrieveTextField
 */
 
 import UIKit
@@ -18,7 +27,7 @@ extension UISearchBar {
 	
 	/// Sets the search icon of a UISearchBar to the given color.
 	///
-	/// - Parameter color: the desired color
+	/// - Parameter color: the UIColor for the search icon
 	func setSearchIconColor(to color: UIColor) {
 		guard let textFieldInsideSearchBar = value(forKey: "searchField") as? UITextField else { return }
 		
@@ -31,7 +40,7 @@ extension UISearchBar {
 	
 	/// Sets the placeholder text's color to the given color.
 	///
-	/// - Parameter color: the desired color
+	/// - Parameter color: the UIColor for the placeholder text
 	func setPlaceholderColor(to color: UIColor) {
 		guard let searchBarPlaceholderText = placeholder else { return }
 		
@@ -45,6 +54,10 @@ extension UISearchBar {
 		textFieldPlaceHolder.attributedPlaceholder = attributedPlaceholderText
 	}
 	
+	/// 	Sets the background color of the UITextField bar
+	/// to the given color.
+	///
+	/// - Parameter color: the UIColor for the textfield bar
 	func setBarBackgroundColor(to color: UIColor) {
 		for subView in subviews {
 			for innerSubview in subView.subviews {
@@ -55,6 +68,9 @@ extension UISearchBar {
 		}
 	}
 	
+	/// Retrieves the UITextField contained inside the UISearchBar.
+	///
+	/// - Returns: the UITextField inside the UISearchBar
 	func retrieveTextField() -> UITextField? {
 		for subView in subviews {
 			for innerSubview in subView.subviews {
