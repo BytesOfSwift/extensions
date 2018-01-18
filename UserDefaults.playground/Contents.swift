@@ -1,6 +1,12 @@
 /*:
 # UserDefauls
-[Apple Documentation for UserDefaults](https://developer.apple.com/documentation/foundation/userdefaults)
+An interface to the user’s defaults database, where you store key-value pairs persistently across launches of your app.
+
+For more information on the UserDefaults class, please checkout [Apple Docs](https://developer.apple.com/documentation/foundation/userdefaults).
+
+## Included Extensions:
+
+1. UserDefaults+...
 */
 
 import Foundation
@@ -10,7 +16,7 @@ extension UserDefaults {
 		case keyOne = "keyOne"
 		case keyTwo = "keyTwo"
 	}
-
+	
 	static func set(_ value: Any?, forKey key: UserDefaultsKey) {
 		UserDefaults.standard.set(value, forKey: key.rawValue)
 	}

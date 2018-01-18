@@ -2,11 +2,13 @@
 # UIImageView
 An object that displays a single image or a sequence of animated images in your interface.
 
-[Apple Documentation for UIImageView](https://developer.apple.com/documentation/uikit/uiimageview)
+For more information on the UIImageView class, please checkout [Apple Docs](https://developer.apple.com/documentation/uikit/uiimageview).
 
-## Included Extensions
+## Included Extensions:
+
 1. UIImageView+DownloadFrom
 */
+
 
 import UIKit
 

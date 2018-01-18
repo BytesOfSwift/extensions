@@ -1,7 +1,17 @@
 /*:
 # NotificationCenter
-[Apple Documentation for NotificationCenter](https://developer.apple.com/documentation/notificationcenter)
+A representation of the code and resources stored in a bundle directory on disk.
+SDKs
+
+For more information on the NotificationCenter framework, please checkout [Apple Docs](https://developer.apple.com/documentation/notificationcenter).
+
+## Included Extensions:
+
+1. Bundle+RemoveObserver
+2. Bundle+AddObserver
+3. Bundle+Post
 */
+
 
 import Foundation
 

@@ -1,4 +1,18 @@
 /*:
+# Bundle
+A representation of the code and resources stored in a bundle directory on disk.
+SDKs
+
+For more information on the Bundle framework, please checkout [Apple Docs](https://developer.apple.com/documentation/foundation/bundle).
+
+## Included Extensions:
+
+1. Bundle+BuildNumber
+2. Bundle+VersionNumber
+3. Bundle+VersionMajorNumber
+4. Bundle+VersionMinorNumber
+5. Bundle+VersionPatchNumber
+
 # IMPORTANT
 The following chunk of code is unavailable on iOS, macOS, watchOS
 or tvOS platforms.
@@ -7,6 +21,7 @@ In order to be able to run it, you should either
 be creating a command line tool on macOS, scripting with Swift or
 building a Swift on Server project.
 */
+
 
 import Foundation
 

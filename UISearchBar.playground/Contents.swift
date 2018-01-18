@@ -2,7 +2,7 @@
 # UISearchBar
 A text field–like control that supports text-based searches.
 
-[Apple Documentation for UISearchBar](https://developer.apple.com/documentation/uikit/uisearchbar)
+For more information on the Bundle framework, please checkout [Apple Docs](https://developer.apple.com/documentation/uikit/uisearchbar).
 
 ## Included Extensions
 1. UISearchBar+SetCancelButton

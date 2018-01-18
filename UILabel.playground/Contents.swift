@@ -1,4 +1,14 @@
-//: Playground - noun: a place where people can play
+/*:
+# UILabel
+A view that displays one or more lines of read-only text, often used in conjunction with controls to describe their intended purpose.
+
+For more information on the UILabel class, please checkout [Apple Docs](https://developer.apple.com/documentation/uikit/uilabel).
+
+## Included Extensions:
+
+1. UILabel+size
+*/
+
 
 import UIKit
 

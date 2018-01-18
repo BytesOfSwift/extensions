@@ -1,4 +1,13 @@
-//: Playground - noun: a place where people can play
+/*:
+# String
+A Unicode string value that is a collection of characters.
+
+For more information on the String structure, please checkout [Apple Docs](https://developer.apple.com/documentation/swift/string).
+
+## Included Extensions:
+
+1. String+Size
+*/
 
 import UIKit
 

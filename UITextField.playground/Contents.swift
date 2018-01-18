@@ -1,7 +1,14 @@
 /*:
 # UITextField
-[Apple Documentation for UITextField](https://developer.apple.com/documentation/uikit/uitextfield)
+An object that displays an editable text area in your interface.
+
+For more information on the Bundle framework, please checkout [Apple Docs](https://developer.apple.com/documentation/uikit/uitextfield).
+
+## Included Extensions:
+
+1. UITextField+setClearButtonImage
 */
+
 
 import UIKit
 
