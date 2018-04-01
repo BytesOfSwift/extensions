@@ -51,45 +51,26 @@ piMutating.scale(to: 6)
 
 
 /*:
-## Scaling
+## Time Interval Conversion
 */
 extension Double {
-	/// 	Converts the given Double formatted number representing
-	/// seconds to minutes and seconds.
+	/// 	Converts the given `Double` number representing seconds
+	/// to a `TimeInterval`
 	///
-	/// - Returns: <#return value description#>
-	func inMinutesAndSeconds() -> String {
-		let minutes = Int((self / 60).truncatingRemainder(dividingBy: 60))
+	/// - Returns: the given `Double` value as a `TimeInterval`
+	func convertToTimeInterval() -> String {
+		let formatter = DateComponentsFormatter()
+		formatter.unitsStyle = .positional
+		formatter.zeroFormattingBehavior = .pad
+		formatter.allowedUnits = [.hour, .minute, .second]
 		
-		let seconds: String = {
-			let seconds = Int(self.truncatingRemainder(dividingBy: 60))
-			
-			if seconds < 10 {
-				return "0\(seconds)"
-			}
-			
-			return "\(seconds)"
-		}()
-		
-		return "\(minutes):" + seconds
-	}
-	
-	/// 	Converts the given Double formatted number representing
-	/// seconds to minutes and seconds.
-	///
-	/// - Returns: <#return value description#>
-	func inMinutesAndSecond() -> (Int, Int) {
-		let minutes = Int((self / 60).truncatingRemainder(dividingBy: 60))
-		print(minutes)
-		
-		let seconds: Int = {
-			let seconds = Int(self.truncatingRemainder(dividingBy: 60))
-			
-			return seconds
-		}()
-		
-		return (minutes, seconds)
+		return formatter.string(from: TimeInterval(self))!
 	}
 }
 
-(3600.0).inMinutesAndSecond()
+/*:
+### Time Interval Example
+*/
+120.convertToTimeInterval()
+234.convertToTimeInterval()
+4892.convertToTimeInterval()
